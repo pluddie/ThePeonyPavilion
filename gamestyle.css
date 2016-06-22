@@ -1,0 +1,294 @@
+/*基本設定:reset*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*設定 nav*/
+
+nav {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:active {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    font-size: 15pt;
+}
+
+nav a:hover {
+    background-color: #90C3D4;
+}
+
+nav a:visited {
+    background-color: #94D1AE;
+}
+
+
+/*dropdown menu設定*/
+
+.container {
+    font-family: cwtexfangsong;
+    font-size: 30px;
+}
+
+.title {}
+
+.dropdown1,
+.dropdown2,
+.dropdown3,
+.dropdown4 {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.dropdown-content1,
+.dropdown-content2,
+.dropdown-content3,
+.dropdown-content4 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 350px;
+    height: 550px;
+    font-size: 14pt;
+}
+
+.dropdown-content1,
+.dropdown-content2,
+.dropdown-content4 p {
+    padding: 15px;
+}
+
+.dropdown-content1 img {
+    width: 300px;
+    padding: 10px;
+}
+
+.dropdown-content2 img {
+    width: 300px;
+}
+
+.dropdown-content4 img {
+    width: 350px;
+    padding: 10px;
+}
+
+.dropdown1:hover .dropdown-content1,
+.dropdown2:hover .dropdown-content2,
+.dropdown3:hover .dropdown-content3,
+.dropdown4:hover .dropdown-content4 {
+    display: block;
+}
+
+.related {
+    padding-top: 30px;
+}
+
+
+/*設定內容圖片&音樂&按鈕們*/
+
+#scene {
+    height: 290px;
+}
+
+.thumbnail {
+    height: 300px;
+}
+
+.thumbnail p {
+    padding-top: 20%;
+    font-size: 18pt;
+    text-align: center;
+}
+
+h1,
+#text {
+    text-align: center;
+}
+
+#content {
+    margin: 3%;
+    font-family: cwtexfangsong;
+}
+
+.music p {
+    font-size: 24px;
+}
+
+
+/*設定footer*/
+
+footer {
+    height: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #eee;
+}
+
+
+/*icon來源設定*/
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+/*字型來源設定*/
+
+
+/*思源黑體Noto Sans TC*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/*仿宋體cwTeXFangSong*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+/*楷體cwTeXKai*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+/*設定RWD：手機、平板、電腦 */
+
+
+/*行動裝置*/
+
+@media screen and (max-width: 767px) {
+    .col-xs-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-xs-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-xs-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-xs-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-xs-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-xs-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-xs-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-xs-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-xs-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-xs-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-xs-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-xs-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 平板電腦 */
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .col-sm-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-sm-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-sm-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-sm-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-sm-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-sm-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-sm-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-sm-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-sm-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-sm-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-sm-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-sm-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 中等以上螢幕 */
+
+@media screen and (min-width:992px) {
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+}

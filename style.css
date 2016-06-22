@@ -1,0 +1,419 @@
+/*基本設定:reset*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*設定column*/
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    /*行動優先，小螢幕的 media query可以省略*/
+    width: 100%;
+}
+
+
+/*新增 row 預設寬度為 100%*/
+
+.row {
+    width: 100%;
+}
+
+
+/*設定 row*/
+
+.row: after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+body {
+    background-image: url(img/background.jpg);
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:active {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    font-size: 15pt;
+}
+
+nav a:hover {
+    background-color: #90C3D4;
+}
+
+nav a:visited {
+    background-color: #94D1AE;
+}
+
+
+/*dropdown menu設定*/
+
+.container {
+    font-family: cwtexfangsong;
+    font-size: 30px;
+}
+
+.title {}
+
+.dropdown1,
+.dropdown2,
+.dropdown3,
+.dropdown4 {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.dropdown-content1,
+.dropdown-content2,
+.dropdown-content3,
+.dropdown-content4 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 350px;
+    height: 550px;
+    font-size: 14pt;
+}
+
+.dropdown-content1,
+.dropdown-content2,
+.dropdown-content4 p {
+    padding: 15px;
+}
+
+.dropdown-content1 img {
+    width: 300px;
+    padding: 10px;
+}
+
+.dropdown-content2 img {
+    width: 300px;
+}
+
+.dropdown-content4 img {
+    width: 350px;
+    padding: 10px;
+}
+
+.dropdown1:hover .dropdown-content1,
+.dropdown2:hover .dropdown-content2,
+.dropdown3:hover .dropdown-content3,
+.dropdown4:hover .dropdown-content4 {
+    display: block;
+}
+
+.related {
+    padding-top: 30px;
+}
+
+
+/*    設定header*/
+
+.background {
+    width: 80%;
+    background-color: #90C3D4;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: cwtexfangsong;
+    font-size: 20px;
+}
+
+.demo img {
+    width: 100%;
+    padding: 25px;
+}
+
+
+/*設定 slider*/
+
+[class*="slider-"] {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+[class*="slider-"] > li {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.slider-2 > li:nth-child(1) {
+    background: url(1.jpg) center no-repeat;
+    background-size: cover;
+    -webkit-animation: slider-2-1 15s linear infinite;
+    animation: slider-2-1 10s linear infinite
+}
+
+.slider-2 > li:nth-child(2) {
+    background: url(2.jpg) center no-repeat;
+    background-size: cover;
+    -webkit-animation: slider-2-2 15s linear infinite;
+    animation: slider-2-2 10s linear infinite
+}
+
+@-webkit-keyframes slider-2-1 {
+    0% {
+        opacity: 1
+    }
+    45% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    95% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes slider-2-2 {
+    0% {
+        opacity: 0
+    }
+    45% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    95% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.description {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70%;
+}
+
+.description p {
+    padding: 10px;
+}
+
+.thumbnail p {
+    padding: 10px;
+}
+
+.content {
+    margin: 0 auto;
+    overflow: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+
+/*設定 thumbnail*/
+
+.thumbnail {
+    font-family: cwtexfangsong;
+    font-size: 20px;
+    text-align: center;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail img:hover {
+    opacity: 0.6;
+}
+
+
+/*設定 footer*/
+
+footer {
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #000;
+    color: #eee;
+}
+
+
+/*icon來源設定*/
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+/*字型來源設定*/
+
+
+/*思源黑體Noto Sans TC*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/*仿宋體cwTeXFangSong*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+/*楷體cwTeXKai*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+/*設定RWD：手機、平板、電腦 */
+
+
+/*行動裝置 (小)*/
+
+@media screen and (max-width: 767px) {
+    .col-xs-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-xs-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-xs-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-xs-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-xs-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-xs-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-xs-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-xs-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-xs-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-xs-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-xs-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-xs-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 平板電腦 (中)*/
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .col-sm-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-sm-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-sm-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-sm-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-sm-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-sm-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-sm-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-sm-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-sm-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-sm-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-sm-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-sm-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 中等以上螢幕  (大)*/
+
+@media screen and (min-width:992px) {
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+}

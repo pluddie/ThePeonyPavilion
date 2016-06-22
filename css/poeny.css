@@ -1,0 +1,447 @@
+/*    基本設定:reset*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*    設定column*/
+
+[class^="col-"] {
+    float: left;
+    padding: 5px;
+    /*行動優先，小螢幕的 media query可以省略*/
+    width: 100%;
+}
+
+
+/*     新增 row 預設寬度為 100%*/
+
+.row {
+    width: 100%;
+}
+
+
+/*     設定 row*/
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/*    設定nav*/
+
+nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #4D4048;
+    color: azure;
+    font-family: cwTeXFangSong;
+    letter-spacing: 1.5px;
+}
+
+.nav-fixed-top {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 導覽列固定上方*/
+
+#nav-title {
+    line-height: 40px;
+    font-weight: normal;
+}
+
+
+/* 牡丹亭遊園  設定*/
+
+#nav-button {
+    margin-top: 0px;
+    border-top-width: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    line-height: 40px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+
+/* nav下拉式選單*/
+
+nav i {
+    display: inline-flex;
+}
+
+
+/* 原本想放icon，可是無法讓它在文字行距置中，所以到網路上找到css畫三角形的教學，又找到inline-flex，遂想到其實icon也是一樣的道理*/
+
+.caret {
+    border-style: solid;
+    border-width: 4px;
+    border-color: azure transparent transparent transparent;
+    display: inline-flex;
+}
+
+
+/* 小倒三角形，可是無法弄到在文字正中間→用display:inline-flex，字放大後又跑掉了*/
+
+.caret02 {
+    border-style: solid;
+    border-width: 4px;
+    border-color: transparent transparent transparent azure;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    position: relative;
+    display: block;
+}
+
+ul.navbar ul.dropdown-menu {
+    display: none;
+}
+
+
+/*隱藏次選單*/
+
+ul.navbar:hover ul.dropdown-menu {
+    display: block;
+    min-width: 450%;
+    position: relative;
+    top: 0px;
+    left: -350%;
+}
+
+
+/* 滑鼠滑入展開次選單，終於弄好了*/
+
+.yamm-content {
+    background-color: #4D4048;
+    line-height: normal;
+    vertical-align: middle;
+    color: azure;
+    font-size: 16pt;
+}
+
+.yamm-content img {
+    width: 100%;
+}
+
+.yamm-content a {
+    font-size: 16pt;
+}
+
+.subnav .caret {
+    border-style: solid;
+    border-width: 4px;
+    border-color: transparent transparent transparent azure;
+    display: inline-block;
+}
+
+
+/* display:inline-block對齊置中*/
+
+.subnav {
+    text-align: center;
+}
+
+.ul#related-websites {
+    width: 100%;
+    left: 0%;
+}
+
+.nav03-discription01 {
+    padding-top: 15vh;
+    font-size: 16pt;
+}
+
+.nav03-discription02 {
+    padding-top: 10px;
+    font-size: 16pt;
+}
+
+
+/*    設定header*/
+
+.background {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+}
+
+header {
+    margin-top: 50px;
+    width: 100%;
+    font-family: cwtexfangsong;
+    font-size: 20px;
+    text-align: center;
+    background: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+header img {
+    width: 80%;
+}
+
+.slide-description {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*     設定 container*/
+
+.container,
+.container-fluid {
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.container {
+    width: 80%;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container03 {
+    width: 80vw;
+    text-align: right;
+    margin-left: 10vw;
+}
+
+.container03 p {
+    line-height: 30px;
+    font-family: cwtexfangsong;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    padding-top: 3vh;
+    margin-right: 0;
+}
+
+.container02,
+.container04 {
+    font-family: cwtexfangsong;
+    color: black;
+    font-size: 18pt;
+}
+
+.container02,
+.container04 a {
+    color: blue;
+    font-size: 20pt;
+    margin-right: 10pt;
+}
+
+
+/*     設定 thumbnail*/
+
+.thumbnail p {
+    font-size: 16pt;
+    color: midnightblue;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+
+/*     設定超連結*/
+
+nav a {
+    color: azure;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    font-family: cwtexfangsong;
+}
+
+nav a:hover {
+    background-color: #90C3D4;
+}
+
+nav a:visited {
+    background-color: #94D1AE;
+}
+
+
+/*     設定 footer*/
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #4D4048;
+    color: #eee;
+}
+
+
+/*    icon來源設定*/
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+/*    字型來源設定*/
+
+
+/*    思源黑體Noto Sans TC*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/*    仿宋體cwTeXFangSong*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+/*    楷體cwTeXKai*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+/*     設定RWD：手機、平板、電腦 */
+
+
+/* 行動裝置 */
+
+@media screen and (max-width:767px) {
+    .col-xs-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-xs-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-xs-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-xs-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-xs-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-xs-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-xs-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-xs-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-xs-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-xs-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-xs-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-xs-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 平板電腦 */
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .col-sm-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-sm-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-sm-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-sm-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-sm-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-sm-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-sm-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-sm-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-sm-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-sm-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-sm-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-sm-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/* 中等以上螢幕 */
+
+@media screen and (min-width:992px) {
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+    .container {
+        width: 80%;
+    }
+}
