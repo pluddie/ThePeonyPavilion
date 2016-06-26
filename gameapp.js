@@ -9,7 +9,9 @@ $(function () {
                 yesButtonMessage: "1夢迴鶯囀煞年光遍",
                 noButtonMessage: "2原來奼紫嫣紅開遍",
                 yesButtonShow: true,
-                noButtonShow: true
+                noButtonShow: true,
+                position: 0
+
             };
         } else if (currentScene === 2) {
             if (decision === 1) { //選擇1
@@ -28,7 +30,8 @@ $(function () {
                     yesButtonMessage: "3錦屏人忒看的這韶光賤",
                     noButtonMessage: "4恰三春好處無人見",
                     yesButtonShow: true,
-                    noButtonShow: true
+                    noButtonShow: true,
+                    position: 75
                 };
             }
 
@@ -40,10 +43,11 @@ $(function () {
                     yesButtonMessage: "5閒凝眄",
                     noButtonMessage: "6閒庭院",
                     yesButtonShow: true,
-                    noButtonShow: true
+                    noButtonShow: true,
+                    position: 150
                 };
             } else {
-                currentScene = 5;
+                currentScene = 8;
                 scene = {
                     message: "答錯了!", //選擇4
                     yesButtonMessage: "重新開始",
@@ -61,10 +65,12 @@ $(function () {
                     yesButtonMessage: "再玩一次!",
                     noButtonMessage: "",
                     yesButtonShow: true,
-                    noButtonShow: false
+                    noButtonShow: false,
+
+                    position: 225
                 };
             } else {
-                currentScene = 7;
+                currentScene = 8;
                 scene = {
                     message: "答錯了!", //選擇6
                     yesButtonMessage: "重新開始",
@@ -73,58 +79,30 @@ $(function () {
                     noButtonShow: false
                 };
             }
-            //以下為重新開始的畫面
-        } else if (currentScene === 8) {
-            if (decision === 1) {
-                currentScene = 1;
-                scene = {
-                    message: "與杜麗娘一同遊園",
-                    yesButtonMessage: "開始",
-                    noButtonMessage: "",
-                    yesButtonShow: true,
-                    noButtonShow: false
-                };
-            }
-        } else if (currentScene === 5) {
-            if (decision === 1) {
-                currentScene = 1;
-                scene = {
-                    message: "與杜麗娘一同遊園",
-                    yesButtonMessage: "開始",
-                    noButtonMessage: "",
-                    yesButtonShow: true,
-                    noButtonShow: false
-                };
-            }
-        } else if (currentScene === 7) {
-            if (decision === 1) {
-                currentScene = 1;
-                scene = {
-                    message: "與杜麗娘一同遊園",
-                    yesButtonMessage: "開始",
-                    noButtonMessage: "",
-                    yesButtonShow: true,
-                    noButtonShow: false
-                };
-            }
-            //再玩一次!
-        } else if (currentScene === 6) {
-            if (decision === 1) {
-                currentScene = 1;
-                scene = {
-                    message: "與杜麗娘一同遊園",
-                    yesButtonMessage: "開始",
-                    noButtonMessage: "",
-                    yesButtonShow: true,
-                    noButtonShow: false
-                };
-            }
+
+        } else if (currentScene === 8 || currentScene === 6) {
+
+            currentScene = 2;
+            scene = {
+                message: "第一題",
+                yesButtonMessage: "1夢迴鶯囀煞年光遍",
+                noButtonMessage: "2原來奼紫嫣紅開遍",
+                yesButtonShow: true,
+                noButtonShow: true,
+                position: 0
+
+            };
+
         }
         //決定完之後 重新繪製畫面
         render(scene);
     }
 
     // 繪製畫面的函數
+    function render(music) {
+        $("#mp3Source").attr("src", "music/" + currentMusic + ".mp3");
+
+    }
 
     function render(scene) {
         $message.text(scene.message);
@@ -140,16 +118,26 @@ $(function () {
             $noButton.show();
         else
             $noButton.hide();
+        moveForward(scene.position);
 
     }
 
+    var $img = $("#scene");
     var scene = {
         message: "與杜麗娘一同遊園",
         yesButtonMessage: "開始",
         noButtonMessage: "",
         yesButtonShow: true,
-        noButtonShow: false
+        noButtonShow: false,
+        position: 0,
     };
+
+
+    function moveForward(distance) {
+        $img.attr("style", "position: relative; left:" + distance + "%;");
+    }
+
+    var currentMusic = 1;
     var currentScene = 1;
 
     var $message = $("#message");
