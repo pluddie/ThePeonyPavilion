@@ -31,7 +31,7 @@ $(function () {
                     noButtonMessage: "4恰三春好處無人見",
                     yesButtonShow: true,
                     noButtonShow: true,
-                    position: 50
+                    position: 25
                 };
             }
 
@@ -44,7 +44,7 @@ $(function () {
                     noButtonMessage: "6閒庭院",
                     yesButtonShow: true,
                     noButtonShow: true,
-                    position: 100
+                    position: 50
                 };
             } else {
                 currentScene = 8;
@@ -67,7 +67,7 @@ $(function () {
                     yesButtonShow: true,
                     noButtonShow: false,
 
-                    position: 150
+                    position: 75
                 };
             } else {
                 currentScene = 8;
