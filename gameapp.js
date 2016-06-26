@@ -17,7 +17,7 @@ $(function () {
             if (decision === 1) { //選擇1
                 currentScene = 8;
                 scene = {
-                    message: "答錯了!",
+                    message: "答錯了!!!",
                     yesButtonMessage: "重新開始",
                     noButtonMessage: "",
                     yesButtonShow: true,
@@ -49,7 +49,7 @@ $(function () {
             } else {
                 currentScene = 8;
                 scene = {
-                    message: "答錯了!", //選擇4
+                    message: "答錯了!!!", //選擇4
                     yesButtonMessage: "重新開始",
                     noButtonMessage: "",
                     yesButtonShow: true,
@@ -61,7 +61,7 @@ $(function () {
             if (decision === 1) {
                 currentScene = 6;
                 scene = {
-                    message: "遊園成功", //選擇5
+                    message: "遊園成功:D!!!", //選擇5
                     yesButtonMessage: "再玩一次!",
                     noButtonMessage: "",
                     yesButtonShow: true,
