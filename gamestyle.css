@@ -105,7 +105,11 @@ nav a:visited {
 
 
 /*設定內容圖片&音樂&按鈕們*/
-
+#description {
+    text-align: center;
+    font-family: cwtexfangsong;
+    font-size: 15pt;
+}
 #scene {
     height: 290px;
 }
